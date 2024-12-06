@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1733514063 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 1 jg tda fracciones\ejercicio1.1\racionalizacion\main.cpp
+	<iostream>
+	"Racionalizacion.h"
+
+1733514277 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 1 jg tda fracciones\ejercicio1.1\racionalizacion\racionalizacion.h
+	<iostream>
+	<string>
+
+1733514518 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 1 jg tda fracciones\ejercicio1.1\racionalizacion\racionalizacion.cpp
+	"Racionalizacion.h"
+

@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 2 validaciones\new folder\validaciones\main.cpp
+	<iostream>
+
+1733517083 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 2 validaciones\new folder\validaciones\validaciones.cpp
+	"Validaciones.h"
+	<iostream>
+	<string>
+	<conio.h>
+	<cstdlib>
+
+1733517083 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 2 validaciones\new folder\validaciones\validaciones.h
+	<conio.h>
+	<string>
+
+1733517245 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 2 validaciones\new folder\validaciones\mainvalidaciones.cpp
+	<iostream>
+	<stdio.h>
+	<cstdlib>
+	<conio.h>
+	<string>
+	"Validaciones.cpp"
+
+1733517083 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 2 validaciones\new folder\validaciones\validaciones.cpp
+	"Validaciones.h"
+	<iostream>
+	<string>
+	<conio.h>
+	<cstdlib>
+

@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1733515621 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 1 jg tda fracciones\ejercicio 4.1\ejercicio 4\fraccion.cpp
+	"Fraccion.h"
+	<stdexcept>
+
+1733515621 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 1 jg tda fracciones\ejercicio 4.1\ejercicio 4\fraccion.h
+
+1733515621 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 1 jg tda fracciones\ejercicio 4.1\ejercicio 4\main.cpp
+	<iostream>
+	"Fraccion.h"
+
