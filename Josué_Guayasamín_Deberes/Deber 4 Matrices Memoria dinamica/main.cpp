@@ -2,7 +2,7 @@
 *******************************************************
 **     UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE		   **
 ** Alumno: Josue Guayasamin                            **
-** Fecha de Creacion: Miércoles, 13 de noviembre de 2024    **
+** Fecha de Creacion: Miï¿½rcoles, 13 de noviembre de 2024    **
 ** Fecha de Modificacion: Viernes, 15 de noviembre de 2024**
 ** Enunciado: Tipos de datos Abstractos                **
 ** NRC: 1978                                           **
@@ -11,8 +11,8 @@
 
 
 #include <iostream>
-#include "Matriz.h"
-#include "Operaciones.h"
+#include "Matriz.cpp"
+#include "Operaciones.cpp"
 int ingresar(const char *);
 int ingresar(const char *msj){
 	int dim;
@@ -20,7 +20,7 @@ int ingresar(const char *msj){
 	scanf_s("%d",&dim);
 	return dim;
 }
-void iniciar(int, int);
+//void iniciar(int, int);
 void iniciar(int  dim){
 	int pot;
 	int **m3=nullptr;
@@ -58,5 +58,6 @@ int main(int argc, char** argv) {
 	int dim;
 	dim=ingresar("Ingrese la dimension de la matriz");
 	iniciar(dim);
+	system("pause");
 	return 0;
 }

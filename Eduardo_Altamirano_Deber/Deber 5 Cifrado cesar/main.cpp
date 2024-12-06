@@ -1,89 +1,360 @@
+/***************************************************************************************
+ *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                                  *
+ * Proposito:                      Programa sobre lista simple                         *
+ * Autor:                          Josue Chango, Adonny Calero, Eduardo altamirano     *
+ * Fecha de creacion:              18/11/2024                                          *
+ * Fecha de modificacion:          18/11/2024                                          *
+ * Materia:                        Estructura de datos                                 *
+ * NRC :                           1978                                                *
+ **************************************************************************************/
+#include "Lista_Simple.cpp"
+#include "Nodo.cpp"
 #include <iostream>
-#include <vector>
-#include <string>
-#include "Utils.h"
-#include "Singly_Linked_List.h"
-#include "Circular_Linked_List.h"
-#include "Doubly_Linked_List.h"
-#include "Doubly_Circular_Linked_List.h"
-
+#include <stdlib.h>
+#include <fstream>
+#include "Validaciones.cpp"
+//#include <windows.h>
 using namespace std;
 
-enum ListaTipo {
-    LISTA_SIMPLE,
-    LISTA_CIRCULAR,
-    LISTA_DOBLE,
-    LISTA_CIRCULAR_DOBLE
-};
 
 int main() {
-    // Listas
-    SinglyLinkedList<string> listaSimple;
-    CircularLinkedList<string> listaCircular;
-    DoublyLinkedList<string> listaDoble;
-    DoublyCircularLinkedList<string> listaCircularDoble;
+    Lista_Simple<int>* lista_entero = new Lista_Simple<int>();
+    Lista_Simple<float>* lista_flotante = new Lista_Simple<float>();
+    Lista_Simple<double>* lista_doble = new Lista_Simple<double>();
+    Lista_Simple<std::string>* lista_string = new Lista_Simple<std::string>();
+    //Lista_Simple<string>* lista_personas = new Lista_Simple<string>();
+    Lista_Simple<char>* lista_letras = new Lista_Simple<char>();
 
-    vector<string> menuTipoLista = {
-        "Lista Simple",
-        "Lista Circular",
-        "Lista Doble",
-        "Lista Circular Doble"
-    };
+    int opcion, dato_entero;
+    float dato_flotante;
+    double dato_doble;
+    std::string dato_string;
+    char dato_char;
+    string nombre1, nombre2, apellido, correo;
 
-    vector<string> menuPrincipal = {
-        "Agregar persona (nombre y apellido, contrasena cifrada)",
-        "Mostrar elementos de la lista",
-        "Salir"
-    };
+    Validaciones<int> ingresar_entero;
+    Validaciones<float> ingresar_flotante;
+    Validaciones<double> ingresar_doble;
+    Validaciones<std::string> ingresar_string;
+    Validaciones<char> ingresar_letra;
 
-    cout << "Seleccione el tipo de lista:" << endl;
-    int tipoLista = mostrarMenuConFlechas(menuTipoLista);
+    /*HINSTANCE hDLL = LoadLibrary("ValidDll.dll");
+    if (!hDLL) {
+        std::cerr << "No se pudo cargar la DLL.\n";
+        return 1;
+    }*/
 
-    ListaTipo listaSeleccionada;
-    if (tipoLista == 0) listaSeleccionada = LISTA_SIMPLE;
-    else if (tipoLista == 1) listaSeleccionada = LISTA_CIRCULAR;
-    else if (tipoLista == 2) listaSeleccionada = LISTA_DOBLE;
-    else if (tipoLista == 3) listaSeleccionada = LISTA_CIRCULAR_DOBLE;
 
-    while (true) {
-        int opcion = mostrarMenuConFlechas(menuPrincipal);
-
+   do {
+        system("cls");
+        cout << "***********Listas Simples***********" << endl;
+        cout << "1. Lista de enteros" << endl;
+        cout << "2. lista de flotantes" << endl;
+        cout << "3. lista de dobles" << endl;
+        cout << "4. lista de strings" << endl;
+        cout << "5. lista de letras" << endl;
+        cout << "6. salir" << endl;
+        opcion = ingresar_entero.ingresar("Opcion: ","entero");
+        cout << endl;
         switch (opcion) {
-        case 0: { // Agregar persona
-            cout << "Ingrese los datos de la persona:" << endl;
-
-            string nombre1 = ingresarLetras("Primer nombre");
-            string apellido = ingresarLetras("Apellido");
-
-            string contrasenia = generarContrasenia(nombre1, apellido);
-            string contraseniaCifrada = contraseniaCesar(contrasenia, 3); // Ejemplo con rotaci�n de 3
-
-            cout << "Datos registrados:" << endl;
-            cout << "Contrasena cifrada: " << contraseniaCifrada << endl;
-
-            // Agregar datos a la lista seleccionada
-            if (listaSeleccionada == LISTA_SIMPLE) listaSimple.insertarAlFinal(contraseniaCifrada);
-            else if (listaSeleccionada == LISTA_CIRCULAR) listaCircular.insertarAlFinal(contraseniaCifrada);
-            else if (listaSeleccionada == LISTA_DOBLE) listaDoble.insertarAlFinal(contraseniaCifrada);
-            else if (listaSeleccionada == LISTA_CIRCULAR_DOBLE) listaCircularDoble.insertarAlFinal(contraseniaCifrada);
-
+        case 1:
+            do {
+                system("cls");
+                cout << "***********Listas Simples***********" << endl;
+                cout << "1. Insertar" << endl;
+                cout << "2. Buscar" << endl;
+                cout << "3. Eliminar" << endl;
+                cout << "4. Mostrar" << endl;
+                cout << "5. Salir" << endl;
+                opcion = ingresar_entero.ingresar("Opcion: ","entero");
+                cout << endl;
+                switch (opcion) {
+                case 1:
+                    dato_entero = ingresar_entero.ingresar("ingrese el dato a insertar: ", "entero");
+                    cout << endl;
+                    lista_entero->Insertar_cabeza(dato_entero);
+                    cout << endl << "Dato ingresado correctamente" << endl;
+                    system("pause");
+                    break;
+                case 2:
+                    dato_entero = ingresar_entero.ingresar("ingrese el dato a buscar: ", "entero");
+                    cout << endl;
+                    lista_entero->Buscar(dato_entero);
+                    system("pause");
+                    break;
+                case 3:
+                    dato_entero = ingresar_entero.ingresar("ingrese el dato a eliminar: ", "entero");
+                    cout << endl;
+                    lista_entero->Eliminar(dato_entero);
+                    system("pause");
+                    break;
+                case 4:
+                    lista_entero->Mostrar();
+                    cout << endl;
+                    system("pause");
+                    break;
+                case 5:
+                    break;
+                default:
+                    cout << "Opcion no valida, intente de nuevo" << endl;
+                    system("pause");
+                    break;
+                }
+            } while (opcion != 5);
+            break;
+        case 2:
+            do {
+                system("cls");
+                cout << "***********Listas Simples***********" << endl;
+                cout << "1. Insertar" << endl;
+                cout << "2. Buscar" << endl;
+                cout << "3. Eliminar" << endl;
+                cout << "4. Mostrar" << endl;
+                cout << "5. Salir" << endl;
+                opcion = ingresar_entero.ingresar("Opcion: ","entero");
+                cout << endl;
+                switch (opcion) {
+                case 1:
+                    dato_flotante = ingresar_flotante.ingresar("ingrese el dato a insertar: ", "flotante");
+                    cout << endl;
+                    lista_flotante->Insertar_cabeza(dato_flotante);
+                    cout << endl << "Dato ingresado correctamente" << endl;
+                    system("pause");
+                    break;
+                case 2:
+                    dato_flotante = ingresar_flotante.ingresar("ingrese el dato a buscar: ", "flotante");
+                    cout << endl;
+                    lista_flotante->Buscar(dato_flotante);
+                    system("pause");
+                    break;
+                case 3:
+                    dato_flotante = ingresar_flotante.ingresar("ingrese el dato a eliminar: ", "flotante");
+                    cout << endl;
+                    lista_flotante->Eliminar(dato_flotante);
+                    system("pause");
+                    break;
+                case 4:
+                    lista_flotante->Mostrar();
+                    cout << endl;
+                    system("pause");
+                    break;
+                case 5:
+                    break;
+                default:
+                    cout << "Opcion no valida, intente de nuevo" << endl;
+                    system("pause");
+                    break;
+                }
+            } while (opcion != 5);
+            break;
+        case 3:
+            do {
+                system("cls");
+                cout << "***********Listas Simples***********" << endl;
+                cout << "1. Insertar" << endl;
+                cout << "2. Buscar" << endl;
+                cout << "3. Eliminar" << endl;
+                cout << "4. Mostrar" << endl;
+                cout << "5. Salir" << endl;
+                opcion = ingresar_entero.ingresar("Opcion: ","entero");
+                cout << endl;
+                switch (opcion) {
+                case 1:
+                    dato_doble = ingresar_doble.ingresar("ingrese el dato a insertar: ", "double");
+                    cout << endl;
+                    lista_doble->Insertar_cabeza(dato_doble);
+                    cout << endl << "Dato ingresado correctamente" << endl;
+                    system("pause");
+                    break;
+                case 2:
+                    dato_doble = ingresar_doble.ingresar("ingrese el dato a buscar: ", "double");
+                    cout << endl;
+                    lista_doble->Buscar(dato_doble);
+                    system("pause");
+                    break;
+                case 3:
+                    dato_doble = ingresar_doble.ingresar("ingrese el dato a eliminar: ", "double");
+                    cout << endl;
+                    lista_doble->Eliminar(dato_doble);
+                    system("pause");
+                    break;
+                case 4:
+                    lista_doble->Mostrar();
+                    cout << endl;
+                    system("pause");
+                    break;
+                case 5:
+                    break;
+                default:
+                    cout << "Opcion no valida, intente de nuevo" << endl;
+                    system("pause");
+                    break;
+                }
+            } while (opcion != 5);
+            break;
+        case 4:
+            do {
+                system("cls");
+                cout << "***********Listas Simples***********" << endl;
+                cout << "1. Insertar" << endl;
+                cout << "2. Buscar" << endl;
+                cout << "3. Eliminar" << endl;
+                cout << "4. Mostrar" << endl;
+                cout << "5. Guardar" << endl;
+                cout << "6. Cargar" << endl;
+                cout << "7. cifrar" << endl;
+                cout << "8. Salir" << endl;
+                opcion = ingresar_entero.ingresar("Opcion: ","entero");
+                cout << endl;
+                switch (opcion) {
+                case 1:
+                    do{
+                        system("cls");
+                        nombre1 = ingresar_string.ingresar("Ingrese su primer nombre: ", "string");
+                        cout << endl;
+                        nombre2 = ingresar_string.ingresar("Ingrese su segundo nombre: ", "string");
+                        cout <<endl;
+                        apellido = ingresar_string.ingresar("Ingrese su apellido: ", "string");
+                        cout << endl;
+                        if((nombre1 == "" && nombre2 == "") || apellido == ""){
+                            cout << "Persona no ingresada" << endl << "La persona necesita al menos un nombre y un apellido " << endl;
+                            system("pause");
+                        }
+                    }while((nombre1 == "" && nombre2 == "") || apellido =="");
+                    dato_string = lista_string->validar_cedula_existente();
+                    correo = lista_string->generar_correo(nombre1, nombre2, apellido);
+                    lista_string->insertar_persona(nombre1, nombre2, apellido, dato_string, correo);
+                    cout << endl << "Persona ingresado correctamente" << endl;
+                    system("pause");
+                    break;
+                case 2:
+                    /*dato_string = ingresar_string.ingresar("ingrese el dato a buscar: ", "string");
+                    cout << endl;
+                    lista_string->Buscar(dato_string);*/
+                    cout << endl << "Opcion en mantenimiento" << endl;
+                    system("pause");
+                    break;
+                case 3:
+                    dato_char = ingresar_letra.ingresar("Ingrese la letra: ", "char");
+                    cout << endl;
+                    lista_string->eliminarLetra(dato_char);
+                    system("pause");
+                    break;
+                case 4:
+                    lista_string->mostrar_persona();
+                    cout << endl;
+                    system("pause");
+                    break;
+                case 5:
+                    lista_string->guardarEnArchivo("Principal.txt");
+                    system("pause");
+                    break;
+                case 6:
+                    lista_string->cargarDesdeArchivo("Principal.txt");
+                    system("pause");
+                    break;
+                case 7:
+                    dato_entero = ingresar_entero.ingresar("Ingrese el desplazamiento para cifrar: ", "entero");
+                    do{
+                        system("cls");
+                        cout << "***********Listas Simples***********" << endl;
+                        cout << "1. Cifrado Cesar" << endl;
+                        cout << "2. Decifrado Cesar" << endl;
+                        cout << "3. Salir" << endl;
+                        opcion = ingresar_entero.ingresar("Opcion: ","entero");
+                        cout << endl;
+                        switch (opcion) {
+                        case 1:
+                            lista_string->cifrar_cesar(dato_entero);
+                            cout << endl;
+                            cout << "Texto cifrado correctamente. " << endl;
+                            system("pause");
+                            break;
+                        case 2:
+                            lista_string->descifrar_cesar(dato_entero);
+                            cout << endl;
+                            cout << "Texto descifrado correctamente. " << endl;
+                            system("pause");
+                            break;
+                        case 3:
+                            break;
+                        default:
+                            cout << "Opcion no valida, intente de nuevo" << endl;
+                            system("pause");
+                            break;
+                        }
+                    }while (opcion != 3);
+                    break;
+                case 8:
+                    break;
+                default:
+                    cout << "Opcion no valida, intente de nuevo" << endl;
+                    system("pause");
+                    break;
+                }
+            } while (opcion != 8);
+            break;
+        case 5:
+            do {
+                system("cls");
+                cout << "***********Listas Simples***********" << endl;
+                cout << "1. Insertar" << endl;
+                cout << "2. Buscar" << endl;
+                cout << "3. Eliminar" << endl;
+                cout << "4. Mostrar" << endl;
+                cout << "5. Salir" << endl;
+                opcion = ingresar_entero.ingresar("Opcion: ","entero");
+                cout << endl;
+                switch (opcion) {
+                case 1:
+                    dato_char = ingresar_letra.ingresar("ingrese el dato a insertar: ", "char");
+                    cout << endl;
+                    lista_letras->Insertar_cabeza(dato_char);
+                    cout << endl << "Dato ingresado correctamente" << endl;
+                    system("pause");
+                    break;
+                case 2:
+                    dato_char = ingresar_letra.ingresar("ingrese el dato a buscar: ", "char");
+                    cout << endl;
+                    lista_letras->Buscar(dato_char);
+                    system("pause");
+                    break;
+                case 3:
+                    dato_char = ingresar_letra.ingresar("ingrese el dato a eliminar: ", "char");
+                    cout << endl;
+                    lista_letras->Eliminar(dato_char);
+                    system("pause");
+                    break;
+                case 4:
+                    lista_letras->Mostrar();
+                    cout << endl;
+                    system("pause");
+                    break;
+                case 5:
+                    break;
+                default:
+                    cout << "Opcion no valida, intente de nuevo" << endl;
+                    system("pause");
+                    break;
+                }
+            } while (opcion != 5);
+            break;
+        case 6:
+            cout << "Gracias por visitarnos" << endl;
+            system("pause");
+            break;
+        default:
+            cout << "Opcion no valida, intente de nuevo" << endl;
             system("pause");
             break;
         }
-        case 1: { // Mostrar elementos
-            cout << "Elementos en la lista seleccionada:" << endl;
+    } while (opcion != 6);
 
-            if (listaSeleccionada == LISTA_SIMPLE) listaSimple.mostrar();
-            else if (listaSeleccionada == LISTA_CIRCULAR) listaCircular.mostrar();
-            else if (listaSeleccionada == LISTA_DOBLE) listaDoble.mostrar();
-            else if (listaSeleccionada == LISTA_CIRCULAR_DOBLE) listaCircularDoble.mostrar();
-
-            system("pause");
-            break;
-        }
-        case 2: // Salir
-            cout << "Saliendo del programa..." << endl;
-            return 0;
-        }
-    }
+    delete[] lista_entero;
+    delete[] lista_doble;
+    delete[] lista_flotante;
+    delete[] lista_letras;
+    delete[] lista_string;
+    
+    return 0;
 }
