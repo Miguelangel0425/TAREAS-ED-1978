@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Codigos/TAREAS-ED-1978/Deber_Validaciones",
-      "program": "d:/Codigos/TAREAS-ED-1978/Deber_Validaciones/build/Debug/outDebug",
+      "cwd": "c:/Users/Usuario/OneDrive/Documentos/GitHub/TAREAS-ED-1978/Eduardo_Altamirano_Deber/Deber 5 Cifrado cesar",
+      "program": "c:/Users/Usuario/OneDrive/Documentos/GitHub/TAREAS-ED-1978/Eduardo_Altamirano_Deber/Deber 5 Cifrado cesar/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
