@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1733517838 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 3 eliminarletra\eliminar letras\eliminarletras\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"Utils.h"
+	"Singly_Linked_List.h"
+
+1733517774 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 3 eliminarletra\eliminar letras\eliminarletras\utils.h
+	<iostream>
+	<string>
+	<unordered_map>
+	<set>
+
+1733517774 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 3 eliminarletra\eliminar letras\eliminarletras\singly_linked_list.h
+	"Persona.h"
+	<iostream>
+
+1733517773 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 3 eliminarletra\eliminar letras\eliminarletras\persona.h
+	<string>
+
+1733517774 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 3 eliminarletra\eliminar letras\eliminarletras\utils.cpp
+	"Utils.h"
+	<algorithm>
+	<cctype>
+	<iostream>
+	<string>
+

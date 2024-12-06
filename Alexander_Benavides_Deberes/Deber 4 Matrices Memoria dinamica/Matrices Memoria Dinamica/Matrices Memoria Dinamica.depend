@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1733518100 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 4 matrices memoria dinamica\matrices memoria dinamica\matriz.cpp
+	<iostream>
+	"Matriz.h"
+
+1733518100 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 4 matrices memoria dinamica\matrices memoria dinamica\matriz.h
+	<iostream>
+
+1733518240 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 4 matrices memoria dinamica\matrices memoria dinamica\main.cpp
+	<iostream>
+	"Matriz.h"
+	"Operaciones.h"
+
+1733518100 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 4 matrices memoria dinamica\matrices memoria dinamica\operaciones.h
+	"Matriz.h"
+
+1733518100 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 4 matrices memoria dinamica\matrices memoria dinamica\operaciones.cpp
+	<iostream>
+	<stdlib.h>
+	<time.h>
+	<stdio.h>
+	<conio.h>
+	"Operaciones.h"
+

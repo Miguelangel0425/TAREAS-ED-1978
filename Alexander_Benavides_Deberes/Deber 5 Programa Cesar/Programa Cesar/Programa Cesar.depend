@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1733518509 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\utils.cpp
+	"Utils.h"
+	<algorithm>
+	<cctype>
+	<conio.h>
+	<vector>
+
+1733518509 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\utils.h
+	<iostream>
+	<string>
+	<vector>
+
+1733518509 source:c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\main.cpp
+	<iostream>
+	<vector>
+	<string>
+	"Utils.h"
+	"Singly_Linked_List.h"
+	"Circular_Linked_List.h"
+	"Doubly_Linked_List.h"
+	"Doubly_Circular_Linked_List.h"
+
+1733518509 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\singly_linked_list.h
+	"Persona.h"
+	<iostream>
+	<type_traits>
+
+1733518509 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\persona.h
+	<string>
+
+1733518588 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\circular_linked_list.h
+	"Persona.h"
+	<iostream>
+	<type_traits>
+
+1733518588 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\doubly_linked_list.h
+	"Persona.h"
+	<iostream>
+	<type_traits>
+
+1733518588 c:\users\xavbe\tareas-ed-1978\alexander_benavides_deberes\deber 5 programa cesar\programa cesar\doubly_circular_linked_list.h
+	"Persona.h"
+	<iostream>
+	<type_traits>
+
