@@ -1,12 +1,3 @@
-/***************************************************************************************
- *            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE                                  *
- * Proposito:                      Programa sobre lista simple                         *
- * Autor:                          Eduardo Altamirano     *
- * Fecha de creacion:              09/11/2024                                          *
- * Fecha de modificacion:          10/11/2024                                          *
- * Materia:                        Estructura de datos                                 *
- * NRC :                           1978                                                *
- **************************************************************************************/
 #include "Fraccion.h"
 #include <stdexcept>
 #include <numeric> // Para std::__gcd
