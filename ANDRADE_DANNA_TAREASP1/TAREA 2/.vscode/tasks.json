@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar C++",
+            "type": "shell",
+            "command": "C:/MinGW/bin/g++.exe",
+            "args": [
+                "-g",
+                "-Wall",
+                "-std=c++17",
+                "*.cpp",
+                "-o",
+                "main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compila todos los archivos .cpp en el directorio"
+        }
+    ]
+}
+
