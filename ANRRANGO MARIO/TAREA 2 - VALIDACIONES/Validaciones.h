@@ -7,25 +7,21 @@
  * Profesor:  Ing. Fernando Solis                                      *
  * NRC :  1978                                                         *
  ***********************************************************************/
-#ifndef FRACCION_H
-#define FRACCION_H
+#ifndef VALIDACIONES_H
+#define VALIDACIONES_H
 
-class Fraccion {
-private:
-    int numerador;
-    int denominador;
+#include <string>
+using namespace std;
 
-    int calcularMCD(int a, int b) const;
-
+class Validaciones {
 public:
-    Fraccion(int num, int den);
-    int getNumerador() const;
-    int getDenominador() const;
-    void setNumerador(int num);
-    void setDenominador(int den);
-    void simplificar();
-    int comparar(const Fraccion& otra) const;
-    void mostrar() const;
+    int ingresar(const char *msj);
+    float ingresarFloat(const char *msj);
+    char ingresarLetra(const char *msj);
+    string ingresarString(const char *msj);
+    double ingresarDouble(const char *msj);
+
+private:
 };
 
 #endif
