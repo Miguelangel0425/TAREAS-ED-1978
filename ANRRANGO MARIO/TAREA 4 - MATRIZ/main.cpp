@@ -1,15 +1,3 @@
-/******************************************************
-*******************************************************
-**     UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE		   **
-** Alumno: Josue Guayasamin                            **
-** Fecha de Creacion: Mi�rcoles, 13 de noviembre de 2024    **
-** Fecha de Modificacion: Viernes, 15 de noviembre de 2024**
-** Enunciado: Tipos de datos Abstractos                **
-** NRC: 1978                                           **
-*******************************************************
-*******************************************************/
-
-
 #include <iostream>
 #include "Matriz.cpp"
 #include "Operaciones.cpp"
