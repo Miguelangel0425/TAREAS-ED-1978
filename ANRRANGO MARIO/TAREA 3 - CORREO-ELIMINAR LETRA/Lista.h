@@ -1,3 +1,12 @@
+/***********************************************************************
+ ************* Universidad de las Fuerzas Armadas ESPE *****************
+ * Author:  Anrrango Mario                                             *
+ * Modified:                                                           *
+ * Purpose: Comparación de fracciones con operaciones                  *
+ * Materia:  Estructura de Datos                                       *
+ * Profesor:  Ing. Fernando Solis                                      *
+ * NRC :  1978                                                         *
+ ***********************************************************************/
 #ifndef LISTA_H
 #define LISTA_H
 

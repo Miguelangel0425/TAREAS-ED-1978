@@ -44,7 +44,7 @@ public:
         DoublyCircularNode<T>* temp = head;
         do {
             if constexpr (std::is_same<T, Persona>::value) {
-                // Si el tipo es Persona, llama a sus métodos
+                // Si el tipo es Persona, llama a sus mï¿½todos
                 std::cout << temp->data.getnombre1() << " " << temp->data.getapellid() << std::endl;
             }
             else {
@@ -66,6 +66,6 @@ public:
     }
 };
 
-#endif // DOUBLY_CIRCULAR_LINKED_LIST_H
+#endif // DOUBLY_CIRCULAR_LINKED_LIST
 
 

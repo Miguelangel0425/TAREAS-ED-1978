@@ -7,39 +7,43 @@
  * Profesor:  Ing. Fernando Solis                                      *
  * NRC :  1978                                                         *
  ***********************************************************************/
+#pragma once
 #include <iostream>
-#include "Matriz.h"
-Matriz::Matriz(){
-}
-Matriz::Matriz(int **matriz1, int **matriz2, int **matrizR, int dim ){
-	this->matriz1=matriz1;
-	this->matriz2=matriz2;
-	this->matrizR=matrizR;
-	this->dim=dim;
-}
-int Matriz::getDim(){
-	return dim;
-}
-void Matriz::setDim(int dim){
-	this->dim=dim;
-}
-int** Matriz::getMatriz1(){
-	return matriz1;
-}
-void Matriz::setMatriz1(int **matriz1){
-	this-> matriz1=matriz1;
-}
+#include <string>
+#include <cctype>
 
-int **Matriz::getMatriz2(){
-	return matriz2;
-}
-void Matriz::setMatriz2(int **matriz2){
-	this-> matriz2=matriz2;
-}
+using namespace std;
 
-int **Matriz::getMatrizR(){
-	return matrizR;
-}
-void Matriz::setMatrizR(int **matrizR){
-	this->matrizR=matrizR;
-}
+template<typename T>
+class Nodo {
+private:
+    T dato;
+    T nombre1;
+    T nombre2;
+    T apellido;
+    T cedula;
+    Nodo* siguiente;
+    string correo;
+public:
+    Nodo(T);
+    Nodo(T, T, T, T, T);
+    void setDato(T);
+    T getDato();
+    void setSiguiente(Nodo*);
+    Nodo* getSiguiente();
+    void setNombre1(T);
+    T getNombre1();
+    void setNombre2(T);
+    T getNombre2();
+    void setApellido(T);
+    T getApellido();
+    void setCorrero(T);
+    string getCorreo();
+    void setCedula(T);
+    string getCedula();
+
+
+    friend class ListaSimples;
+
+};
+
